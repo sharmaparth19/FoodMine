@@ -1,0 +1,28 @@
+  <!-- add and get cart -->
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <h1> Food items </h1>
+
+      <tr *ngFor="let food of foods">
+        <td>{{food.name}}</td>
+        <td>{{food.price | currency}}</td>
+        <td><button (click)="addTocart(food)">Add to cart</button></td>
+      </tr>
+      <h1> Added Cart items </h1>
+      <tr *ngFor="let item of cartItems">
+        <td>{{item.name}}</td>
+        <td>{{item.price | currency}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
